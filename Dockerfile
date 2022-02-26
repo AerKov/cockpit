@@ -21,7 +21,5 @@ RUN echo "extension=redis.so" > /usr/local/etc/php/conf.d/redis.ini
 RUN chown -R www-data:www-data /var/www/html
 
 VOLUME /var/www/html
-COPY ./docker/run-apache2.sh /usr/local/bin/run-apache2.sh
-COPY . /var/www/html/
 
 CMD ["apache2-foreground"]
